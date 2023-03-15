@@ -8,8 +8,8 @@ public class CardHolder {
 	int numDVDs;
 
 	CardHolder() {
-		firstName = "unknown";
-		lastName = "unknown";
+		firstName = null;
+		lastName = null;
 		libraryCard = new LibraryCard();
 		numAudioBooks = 0;
 		numDVDs = 0;
@@ -21,5 +21,9 @@ public class CardHolder {
 		libraryCard = new LibraryCard(ch.libraryCard);
 		numAudioBooks = ch.numAudioBooks;
 		numDVDs = ch.numDVDs;
+	}
+
+	String toString() {
+		return "CardHolder[First Name: " + (firstName == null ? "<Unknown>" : firstName) + ", Last Name: " + (lastName == null ? "<Unknown>" : lastName) + ", Library Card[" + libraryCard.toString() + "], Audio Books: " + numAudioBooks + ", DVDs: " + numDVDs + ']';
 	}
 }
