@@ -62,12 +62,13 @@ public class Audiobook {
         this.isAvailable = availability;
     }
 
-    public void checkOut(){
+    public boolean checkOut(){
         if (this.isAvailable){
-            this.isAvailable = false;
+            return this.isAvailable = false;
         }
         else{
             System.out.println("Audiobook is currently unavailable");
+            return this.isAvailable = false;
         }
     }
 
