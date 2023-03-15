@@ -6,7 +6,7 @@ public class DVD {
     public DVD() {
         title = "Spider-Man";
         genre = "Action";
-        isAvailable = "True";
+        isAvailable = true;
     }
 
     public DVD(String title, String genre, boolean isAvailable){
@@ -19,15 +19,16 @@ public class DVD {
         this.title = copyDVD.title;
         this.genre = copyDVD.genre; 
         this.isAvailable = copyDVD.isAvailable;
-        copyDVD++;
     }
 
-    public void checkOut() {
-        if (this.isAvailable.equals(True)) {
-            this.isAvailable = False;
+    public Boolean checkOut() {
+        if (this.isAvailable) {
+            this.isAvailable = false;
+            return true;
         }
         else {
             System.out.println("DVD Currently not Available")
+            return false;
         }
     }
 
