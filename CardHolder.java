@@ -15,6 +15,33 @@ public class CardHolder {
 		numDVDs = 0;
 	}
 
+	void checkOut(DVD dvd) {
+		if (numDVDs < 3) {
+			if (dvd.checkOut()) {
+				System.out.println(libraryCard.getSlogan());
+				dvd.setAvailabl
+				++numDVDs;
+			}
+		}
+	}
+
+	void checkOut(Audiobook book) {
+		if (numAudioBooks < 3) {
+			if (book.checkOut()) {
+				System.out.println(libraryCard.getSlogan());
+				++numAudioBooks;
+			}
+		}
+	}
+
+	public void checkIn(DVD dvd) {
+		dvd.checkIn();
+	}
+
+	public void checkIn(Audiobook book) {
+		book.checkIn();
+	}
+
 	public CardHolder(CardHolder ch) {
 		firstName = ch.firstName;
 		lastName = ch.lastName;
