@@ -19,7 +19,6 @@ public class CardHolder {
 		if (numDVDs < 3) {
 			if (dvd.checkOut()) {
 				System.out.println(libraryCard.getSlogan());
-				dvd.setAvailabl
 				++numDVDs;
 			}
 		}
