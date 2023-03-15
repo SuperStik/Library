@@ -58,7 +58,7 @@ public class Audiobook {
         return this.isAvailalle;
     }
 
-    public boolean setAvailable(boolean availability){
+    public void setAvailable(boolean availability){
         this.isAvailalle = availability;
     }
 
