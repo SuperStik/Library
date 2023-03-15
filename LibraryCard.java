@@ -1,13 +1,13 @@
 public class LibraryCard{
 
-    private String id;
+    private int id;
     private String slogan;
     private boolean isActive;
-    int cardID = 0;
+    private static int cardID = 0;
 
     //Constructor
     public LibraryCard(){
-        this.id = cardID;
+        this.id = cardID++;
         this.slogan = "We Love Books";
         this.isActive = true;
         cardID++;
