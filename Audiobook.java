@@ -32,7 +32,7 @@ public class Audiobook {
         return this.title;
     }
 
-    public String setTitle(String newTitle){
+    public void String setTitle(String newTitle){
         this.title = newTitle;
     }
 
@@ -40,7 +40,7 @@ public class Audiobook {
         return this.author;
     }
 
-    public String setAuthor(String newAuthor){
+    public void String setAuthor(String newAuthor){
         this.author = newAuthor;
     }
 
@@ -48,7 +48,7 @@ public class Audiobook {
         return this.runtime;
     }
 
-    public int setRuntime(int newRuntime){
+    public void int setRuntime(int newRuntime){
         this.runtime = newRuntime;
     }
 
@@ -60,12 +60,23 @@ public class Audiobook {
         this.isAvailalle = availability;
     }
 
+    public void checkOut(){
+        if (this.isAvailalle){
+            this.isAvailalle = false;
+        }
+        else{
+            System.out.println("Audiobook is currently unavailable");
+        }
+    }
+
+    public void checkIn(){
+        this.isAvailalle = true;
+    }
+
     public String toString() {
         return "Title: " + this.title + "\n" + 
         "Author: " + this.author + "\n" + 
         "Runtime: " + this.runtime + "\n" +
         "Availability: " + this.isAvailalle;
-
-    public 
     }
 
