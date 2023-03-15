@@ -4,14 +4,14 @@ public class Audiobook {
     private String title;
     private String author;
     private int runtime;
-    private boolean isAvailalle;
+    private boolean isAvailable;
 
     //default
     public Audiobook() {
         this.title = "none";
         this.author = "none";
         this.runtime = 0;
-        this.isAvailalle = true;
+        this.isAvailable = true;
     }
     
     //overloaded
@@ -26,7 +26,7 @@ public class Audiobook {
         this.title = audiobookToCopy.title;
         this.author = audiobookToCopy.author;
         this.runtime = audiobookToCopy.runtime;
-        this.isAvailalle = audiobookToCopy.isAvailalle;
+        this.isAvailable = audiobookToCopy.isAvailable;
     }
 
     //accessors and mutators
@@ -55,16 +55,16 @@ public class Audiobook {
     }
 
     public boolean isAvailable() {
-        return this.isAvailalle;
+        return this.isAvailable;
     }
 
     public void setAvailable(boolean availability){
-        this.isAvailalle = availability;
+        this.isAvailable = availability;
     }
 
     public void checkOut(){
-        if (this.isAvailalle){
-            this.isAvailalle = false;
+        if (this.isAvailable){
+            this.isAvailable = false;
         }
         else{
             System.out.println("Audiobook is currently unavailable");
@@ -72,14 +72,14 @@ public class Audiobook {
     }
 
     public void checkIn(){
-        this.isAvailalle = true;
+        this.isAvailable = true;
     }
 
     public String toString() {
         return "Title: " + this.title + "\n" + 
         "Author: " + this.author + "\n" + 
         "Runtime: " + this.runtime + "\n" +
-        "Availability: " + this.isAvailalle;
+        "Availability: " + this.isAvailable;
     }
 }
 
