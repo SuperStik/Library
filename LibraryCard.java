@@ -13,8 +13,8 @@ public class LibraryCard{
         cardID++;
     }
 
-    public LibraryCard(String id, String slogan){
-        this.id = id;
+    public LibraryCard(String slogan){
+        this.id = cardID++;
         this.slogan = slogan;
         this.isActive = true;
         cardID++;
