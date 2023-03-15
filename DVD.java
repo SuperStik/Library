@@ -15,7 +15,25 @@ public Class DVD {
         this.isAvailable = isAvailable;
     }
 
-    public boolean()
+    public DVD(DVD copyDVD) {
+        this.title = copyDVD.title;
+        this.genre = copyDVD.genre; 
+        this.isAvailable = copyDVD.isAvailable;
+        copyDVD++;
+    }
+
+    public void checkOut() {
+        if (this.isAvailable.equals(True)) {
+            this.isAvailable = False;
+        }
+        else {
+            System.out.println("DVD Currently not Available")
+        }
+    }
+
+    public void checkIn(){
+        this.isAvailable = "True";
+    }
 
     // Accessors + Mutators
     public void setTitle(String title){
@@ -35,7 +53,11 @@ public Class DVD {
     }
 
     // toString Method
-    
+    public String toString() {
+        return "Title: " + this.title + "\nGenre: " + this.genre + 
+        "\nAvailability" + this.isAvailable;
+    }
+
 
 
 
