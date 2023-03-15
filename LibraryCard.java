@@ -3,18 +3,21 @@ public class LibraryCard{
     private String id;
     private String slogan;
     private boolean isActive;
+    int cardID = 0;
 
     //Constructor
     public LibraryCard(){
-        this.id = "000000";
+        this.id = cardID;
         this.slogan = "We Love Books";
         this.isActive = true;
+        cardID++;
     }
 
     public LibraryCard(String id, String slogan){
         this.id = id;
         this.slogan = slogan;
         this.isActive = true;
+        cardID++;
     }
 
     //Copy Constructor
@@ -56,12 +59,14 @@ public class LibraryCard{
 
     //deactivate
     public void deactivate(LibraryCard card){
-        if (this.isActive == true){
+        if (this.isActive){
             this.isActive = false;
         } else {
             this.isActive = true;
         }
     }
+
+
 
 
 }
