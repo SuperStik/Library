@@ -6,4 +6,10 @@ public class CardHolder {
 	LibraryCard libraryCard;
 	int numAudioBooks;
 	int numDVDs;
+
+	CardHolder() {
+		firstName = "unknown";
+		lastName = "unknown";
+		libraryCard = new LibraryCard();
+	}
 }
