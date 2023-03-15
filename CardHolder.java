@@ -1,13 +1,13 @@
 package Library;
 
 public class CardHolder {
-	String firstName;
-	String lastName;
-	LibraryCard libraryCard;
-	int numAudioBooks;
-	int numDVDs;
+	private String firstName;
+	private String lastName;
+	private LibraryCard libraryCard;
+	private int numAudioBooks;
+	private int numDVDs;
 
-	CardHolder() {
+	public CardHolder() {
 		firstName = null;
 		lastName = null;
 		libraryCard = new LibraryCard();
@@ -15,7 +15,7 @@ public class CardHolder {
 		numDVDs = 0;
 	}
 
-	CardHolder(CardHolder ch) {
+	public CardHolder(CardHolder ch) {
 		firstName = ch.firstName;
 		lastName = ch.lastName;
 		libraryCard = new LibraryCard(ch.libraryCard);
@@ -23,7 +23,7 @@ public class CardHolder {
 		numDVDs = ch.numDVDs;
 	}
 
-	String toString() {
+	public String toString() {
 		return "CardHolder[First Name: " + (firstName == null ? "<Unknown>" : firstName) + ", Last Name: " + (lastName == null ? "<Unknown>" : lastName) + ", Library Card[" + libraryCard.toString() + "], Audio Books: " + numAudioBooks + ", DVDs: " + numDVDs + ']';
 	}
 }
