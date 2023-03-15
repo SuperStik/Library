@@ -15,6 +15,26 @@ public class CardHolder {
 		numDVDs = 0;
 	}
 
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public LibraryCard getLibraryCard() {
+		return libraryCard;
+	}
+
 	void checkOut(DVD dvd) {
 		if (numDVDs < 3) {
 			if (dvd.checkOut()) {
@@ -34,11 +54,17 @@ public class CardHolder {
 	}
 
 	public void checkIn(DVD dvd) {
-		dvd.checkIn();
+		if (numDVDs > 0) {
+			dvd.checkIn();
+			--numDVDs;
+		}
 	}
 
 	public void checkIn(Audiobook book) {
-		book.checkIn();
+		if (numAudioBooks > 0) {
+			book.checkIn();
+			--numAudioBooks;
+		}
 	}
 
 	public CardHolder(CardHolder ch) {
