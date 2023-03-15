@@ -1,3 +1,5 @@
+package Library;
+
 public class Audiobook {
     private String title;
     private String author;
@@ -8,8 +10,8 @@ public class Audiobook {
     public Audiobook() {
         this.title = "none";
         this.author = "none";
-        this.runtime = "none";
-        this.isAvailalle = "true";
+        this.runtime = 0;
+        this.isAvailalle = true;
     }
     
     //overloaded
@@ -32,7 +34,7 @@ public class Audiobook {
         return this.title;
     }
 
-    public void String setTitle(String newTitle){
+    public void setTitle(String newTitle){
         this.title = newTitle;
     }
 
@@ -40,7 +42,7 @@ public class Audiobook {
         return this.author;
     }
 
-    public void String setAuthor(String newAuthor){
+    public void setAuthor(String newAuthor){
         this.author = newAuthor;
     }
 
@@ -48,7 +50,7 @@ public class Audiobook {
         return this.runtime;
     }
 
-    public void int setRuntime(int newRuntime){
+    public void setRuntime(int newRuntime){
         this.runtime = newRuntime;
     }
 
@@ -79,4 +81,5 @@ public class Audiobook {
         "Runtime: " + this.runtime + "\n" +
         "Availability: " + this.isAvailalle;
     }
+}
 
