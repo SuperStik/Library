@@ -32,7 +32,7 @@ public Class DVD {
     }
 
     public void checkIn(){
-        this.isAvailable = "True";
+        this.isAvailable = True;
     }
 
     // Accessors + Mutators
