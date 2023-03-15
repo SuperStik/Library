@@ -44,6 +44,10 @@ public class DVD {
     public void setGenre(String genre){
         this.genre = genre;
     }
+    
+    public void setAvailablity(boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
 
     public String getTitle(){
         return title;
@@ -51,6 +55,10 @@ public class DVD {
 
     public String getGenre(){
         return genre;
+    }
+
+    public boolean getAvailability() {
+        return isAvailable;
     }
 
     // toString Method
