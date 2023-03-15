@@ -1,4 +1,4 @@
-public Class DVD {
+public class DVD {
     private String title;
     private String genre;
     private boolean isAvailable;
